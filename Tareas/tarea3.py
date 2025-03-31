@@ -1,6 +1,6 @@
 from abc import ABC
 from abc import abstractmethod
-from math import pi
+from math import pi 
 from math import pow
 
 class CuerpoCeleste(ABC):
