@@ -1,0 +1,9 @@
+N: 100000
+v0_mean: 50.0
+v0_std_percent: 0.05
+g_mean: 9.81
+g_std: 0.01
+angle_min_deg: 0
+angle_max_deg: 90
+d_min: 250
+d_max: 260
