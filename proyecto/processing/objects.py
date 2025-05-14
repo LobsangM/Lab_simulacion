@@ -91,7 +91,7 @@ class Planet(PhysicalProperties, GraphicalProperties):
     def __str__(self):
         return f"Planeta - Masa: {self.mass}, Posición: {self.position}, Velocidad: {self.velocity}"
 
-    def update(self, bodies, gravity, dt):
+    def update(self, bodies, gravity, dt, screen_width=800, screen_height=800):
         for moon in self.moons:
             dx = moon.position.x - self.position.x
             dy = moon.position.y - self.position.y
@@ -113,7 +113,7 @@ class Moon(PhysicalProperties, GraphicalProperties):
         GraphicalProperties.__init__(self, color, size, shape)
         self.orbit_center = orbit_center
 
-    def update(self, dt, gravity, bodies):
+    def update(self, dt, gravity, bodies, screen_width=800, screen_height=800):
         dx = self.orbit_center.position.x - self.position.x
         dy = self.orbit_center.position.y - self.position.y
         distance = (dx ** 2 + dy ** 2) ** 0.5

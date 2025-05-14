@@ -3,7 +3,7 @@ simulation:
   screen_width: 1200
   screen_height: 800
   time_step: 0.5
-  gravity_constant: 1.0
+  gravity_constant: 0.04
 
 planet:
   mass:
