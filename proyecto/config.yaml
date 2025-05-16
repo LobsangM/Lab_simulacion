@@ -1,5 +1,5 @@
 simulation:
-  num_bodies: 300
+  num_bodies: 1
   screen_width: 1200
   screen_height: 800
   time_step: 0.5
@@ -36,5 +36,5 @@ collisions:
 
 moons:
   enable: true
-  max_moons_per_planet: 2
+  max_moons_per_planet: 5
   moon_mass_ratio: 0.1

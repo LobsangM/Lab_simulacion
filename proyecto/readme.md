@@ -50,34 +50,34 @@ Laboratorio_de_simulacion/
 1. Abre una terminal en la carpeta `Las_simulacion/` (donde está `proyecto/`)
 2. Crea y activa el entorno virtual:
 
-```bash
+
 make venv
 source ../venv/bin/activate
 
-Instala las dependencias:
+## Instala las dependencias:
 
 make install
 
 
-Corre la simulación con:
+## Corre la simulación con:
 
 make run
 
 
-Puedes personalizar los parámetros en el archivo proyecto/config.yaml, incluyendo:
+## Puedes personalizar los parámetros en el archivo proyecto/config.yaml, incluyendo:
 
-Número de cuerpos celestes
-Constante gravitacional
-Dimensiones de la ventana
-Distribuciones de masa, velocidad y posición
-Opciones visuales (formas, colores, tamaño)
-Activación de lunas y colisiones
+-Número de cuerpos celestes
+-Constante gravitacional
+-Dimensiones de la ventana
+-Distribuciones de masa, velocidad y posición
+-Opciones visuales (formas, colores, tamaño)
+-Activación de lunas y colisiones
 
-El proyecto incluye pruebas unitarias con unittest. Puedes ejecutar pruebas individuales o todas:
+## El proyecto incluye pruebas unitarias con unittest. Puedes ejecutar pruebas individuales o todas:
 
-make test_objects     # Testea objetos Planet y Moon
-make test_physics     # Testea interacciones gravitacionales y colisiones
-make test_utils       # Testea la clase Vector2D
-make test_all         # Corre todos los tests
+-make test_objects     # Testea objetos Planet y Moon
+-make test_physics     # Testea interacciones gravitacionales y colisiones
+-make test_utils       # Testea la clase Vector2D
+-make test_all         # Corre todos los tests
 
 
