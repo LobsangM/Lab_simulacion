@@ -2,11 +2,12 @@ import pygame
 import yaml
 import random
 from processing.objects import Planet
-import os 
+import os #accede a funciones del sistema operativo para poder interactuar con el entorno de archivos
 
+#La clase Simulation es el controlador del sistema, se lee la configuración desde YAML, crea y maneja los cuerpos celestes, sus interacciones y luego lo simula con pygame
 class Simulation:
     def __init__(self):
-
+#Se usa yaml para cargar la configuración al iniciar Simulation.py
         config_path = os.path.join(os.path.dirname(__file__), "..", "config.yaml")
         with open(config_path, "r") as f:
             self.config = yaml.safe_load(f) 
@@ -21,15 +22,16 @@ class Simulation:
         pygame.init()
         self.screen = pygame.display.set_mode((self.width, self.height))
         pygame.display.set_caption("Simulación Gravitacional")
+        #self.bodies contiene una lista de instancias, aqui se aplica agregacion
         self.bodies = self.create_bodies()
 
     def create_bodies(self):
         return [Planet.from_config(self.config) for _ in range(self.num_bodies)]
-
+#Se usa Vector2D en merge_bodies para conservar masa y momento
     def merge_bodies(self, body1, body2):
         total_mass = body1.mass + body2.mass
     
-    # Centro de masa usando Vector2D
+    # Centro de masa usando Vector2D, 
         new_position = (body1.position * body1.mass + body2.position * body2.mass) * (1/total_mass)
     
     # Conservación de momento usando Vector2D
@@ -86,4 +88,3 @@ class Simulation:
             pygame.display.flip()
             clock.tick(60)
         pygame.quit()
-

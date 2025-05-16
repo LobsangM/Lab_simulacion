@@ -1,9 +1,9 @@
 simulation:
-  num_bodies: 100
+  num_bodies: 300
   screen_width: 1200
   screen_height: 800
   time_step: 0.5
-  gravity_constant: 0.04
+  gravity_constant: 0.5
 
 planet:
   mass:
